@@ -33,10 +33,10 @@ public class EvenOdd extends JFrame {
                 try {
                     int number = Integer.parseInt(f.getText());
                     if(number % 2 == 0){
-                        ls.setText("It's an even number.");
+                        ls.setText("It's an even number");
                     }
                     else{
-                        ls.setText("It's an odd number.");
+                        ls.setText("It's an odd number");
                     }
                 }catch (NumberFormatException ex){
                     JOptionPane.showMessageDialog(null,"The number is not in integer format.");
