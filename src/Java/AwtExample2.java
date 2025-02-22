@@ -2,7 +2,7 @@ package Java;
 import java.awt.*;
 public class AwtExample2 {
     public AwtExample2(){
-        Frame f = new Frame();
+        Frame f = new Frame("title");
 
         Label l = new Label("Employee id: ");
         TextField t = new TextField();
@@ -17,12 +17,12 @@ public class AwtExample2 {
         f.add(b);
 
         f.setSize(500,300);
-        f.setTitle("Second project");
         f.setLayout(null);
         f.setVisible(true);
     }
 
     public static void main(String[] args) {
+
         new AwtExample2();
     }
 }

@@ -49,9 +49,9 @@ public class SwingExample2 extends JFrame implements ActionListener {
                 double width = Double.parseDouble(widthField.getText());
                 double area = length*width;
 
-                resultField.setText(String.format("%.2f", area));
+                resultField.setText(String.format("%.4f", area));
             }catch (NumberFormatException ex){
-                JOptionPane.showMessageDialog(null, "kjagkasga");
+                JOptionPane.showMessageDialog(null, "not valid");
             }
         }
     }

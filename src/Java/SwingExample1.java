@@ -4,10 +4,11 @@ package Java;
 //import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
+//import javax.swing.JButton;
+//import javax.swing.JFrame;
+//import javax.swing.JLabel;
+//import javax.swing.JTextField;
+import javax.swing.*;
 
 public class SwingExample1 extends JFrame implements ActionListener  {
     JTextField tf; JLabel l; JButton b;
@@ -29,8 +30,8 @@ public class SwingExample1 extends JFrame implements ActionListener  {
     @Override
     public void actionPerformed(ActionEvent e) {
         try{
-            String host=tf.getText();
-            String ip=java.net.InetAddress.getByName(host).getHostAddress();
+            String host = tf.getText();
+            String ip =java.net.InetAddress.getByName(host).getHostAddress();
             l.setText("IP of "+host+" is: "+ip);
         }catch(Exception ex){
             ex.printStackTrace();
