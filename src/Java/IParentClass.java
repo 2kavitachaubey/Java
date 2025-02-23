@@ -1,7 +1,7 @@
 package Java;
 
 // Super Class
-public class ParentClass {
+public class IParentClass {
     public int add(int num1, int num2){
         return num1 + num2;
     }
