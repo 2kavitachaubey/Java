@@ -19,10 +19,10 @@ public class Convert extends JFrame{
         add(jb);
 
         JLabel result  = new JLabel();
-        result.setBounds(120,120,150,40);
+        result.setBounds(120,100,100,40);
         add(result);
 
-        setSize(500,500);
+        setSize(400,400);
         setVisible(true);
         setLayout(null);
         setTitle("Conversion of temperature");
@@ -36,7 +36,7 @@ public class Convert extends JFrame{
                     double f = (degree * 9 / 5) + 32;
                     result.setText("Fahrenheit: " + String.format("%.2f", f));
                 } catch (NumberFormatException ex) {
-                    result.setText("Invalid input! Enter a number.");
+                    JOptionPane.showMessageDialog(null,"Invalid Temperature");
                 }
             }
         });
