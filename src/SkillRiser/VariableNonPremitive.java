@@ -1,4 +1,4 @@
-package CoreJava;
+package SkillRiser;
 
 import java.util.Date;
 
