@@ -1,4 +1,4 @@
-package Thread.myPackage;
+package Thread;
 
 import java.lang.*;
 class ThreadRun extends Thread{

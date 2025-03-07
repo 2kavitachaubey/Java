@@ -1,4 +1,4 @@
-package Thread.myPackage;
+package Thread;
 
 import java.lang.*;
 public class ThreadGraded implements Runnable {
