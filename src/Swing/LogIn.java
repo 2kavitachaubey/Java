@@ -45,14 +45,13 @@ public class LogIn extends JFrame{
         jb.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try{
-                    String password = pf.getText();
-                    String name = fn.getText();
-                    String major = fp.getText();
-                    if(password == "kavitacha"){
-                        JOptionPane.showMessageDialog(null, course);
-                    }
-                }catch (Exception e){
+                String password = new String(pf.getPassword());
+                String name = fn.getText();
+                String major = fp.getText();
+                if(password.equals("kavitacha")){
+                    JOptionPane.showMessageDialog(null, String.join(",",course));
+                }
+                else {
                     JOptionPane.showMessageDialog(null, "Incorrect Password");
                 }
             }
