@@ -2,6 +2,7 @@ package Swing;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Optional;
 
 public class LogIn extends JFrame{
     public LogIn(){
@@ -30,6 +31,12 @@ public class LogIn extends JFrame{
         jb.setBounds(140,170,100,40);
         add(jb);
 
+        JLabel result = new JLabel("Password: ");
+        result.setBounds(10,90,70,40);
+        add(result);
+
+        String[] course = new String[]{"Java","DSA","Operating System"};
+
         setSize(400,400);
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -40,9 +47,13 @@ public class LogIn extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 try{
                     String password = pf.getText();
+                    String name = fn.getText();
+                    String major = fp.getText();
                     if(password == "kavitacha"){
-                        JOptionPane.showMessageDialog();
+                        JOptionPane.showMessageDialog(null, course);
                     }
+                }catch (Exception e){
+                    JOptionPane.showMessageDialog(null, "Incorrect Password");
                 }
             }
         });
