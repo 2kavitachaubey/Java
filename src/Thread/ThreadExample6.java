@@ -7,21 +7,17 @@ class Task implements Runnable{
         System.out.println("Run thread : " + Thread.currentThread().getName());
     }
 }
-public class ThreadExample6 {
+public class ThreadExample6 extends Thread {
     public static void main(String[] args) {
-
-//        // Single Thread
-//        Thread t = new Thread(new Task());
-//        t.start();
-//        System.out.println(Thread.currentThread().getName());
-
-
-
-//        Multiple Threading
         for(int i = 0 ; i<10; i++){
-            Thread t = new Thread(new Thread());
+            Thread t = new Thread(new Task());
             t.start();
         }
         System.out.println(Thread.currentThread().getName());
     }
 }
+
+//        // Single Thread
+//        Thread t = new Thread(new Task());
+//        t.start();
+//        System.out.println(Thread.currentThread().getName());
