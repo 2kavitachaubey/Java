@@ -78,18 +78,18 @@ public class CollectionRevised {
 //    }
 
     //linked list
-//    public void linked(){
-//        LinkedList<Integer> ll = new LinkedList<>(Arrays.asList(1,5,7,3,24));
-//        ll.add(2);
-//        ll.add(1);
-//        ll.addFirst(0);
-//
-//        ll.add(2,8);
-//        System.out.println(ll);
-//
-//        System.out.println(ll.indexOf(1));
-//        System.out.println(ll.lastIndexOf(1));
-//    }
+    public void linked(){
+        LinkedList<Integer> ll = new LinkedList<>(Arrays.asList(1,5,7,3,24));
+        ll.add(2);
+        ll.add(1);
+        ll.addFirst(0);
+
+        ll.add(2,8);
+        System.out.println(ll);
+
+        System.out.println(ll.indexOf(1));
+        System.out.println(ll.lastIndexOf(1));
+    }
 
     public void queue(){
         Queue<Integer> ll = new LinkedList<>(Arrays.asList(1,5,7,3,24));
@@ -105,11 +105,87 @@ public class CollectionRevised {
         System.out.println(ql.poll());
         System.out.println(ql);
     }
+
+    //Tree Map
+    public void tree(){
+        TreeMap<Integer,String> value = new TreeMap<>();
+        // Insertion
+        value.put(1,"One");
+        value.put(2,"Two");
+        value.putIfAbsent(4,"Four");
+
+        // Access
+        System.out.println(value.keySet());
+        System.out.println(value.entrySet());
+        System.out.println(value.values());
+        System.out.println(value.get(2));
+        System.out.println(value.getOrDefault(3,"Three"));
+
+        //Remove
+        System.out.println(value.remove(4));
+        System.out.println(value.remove(2,"Two"));
+
+        value.put(5,"Five");
+        value.put(7,"Seven");
+
+        // first , last
+        System.out.println(value.firstKey());
+        System.out.println(value.firstEntry());
+        System.out.println(value.lastKey());
+        System.out.println(value.lastEntry());
+
+        value.put(10,"Ten");
+        value.put(0,"Zero");
+
+        System.out.println(value);
+        //heigher
+        System.out.println(value.higherKey(2));
+        System.out.println(value.higherEntry(2));
+
+        //lower
+        System.out.println(value.lowerKey(2));
+        System.out.println(value.lowerEntry(2));
+
+        // ceiling
+        System.out.println(value.ceilingKey(2));
+        System.out.println(value.ceilingEntry(2));
+
+        //floor
+        System.out.println(value.floorKey(2));
+        System.out.println(value.floorEntry(2));
+
+    }
+
+    public void hash(){
+        HashMap<Integer,String> value = new HashMap<>();
+        // Insertion
+        value.put(1,"One");
+        value.put(2,"Two");
+        value.putIfAbsent(4,"Four");
+
+        // Access
+        System.out.println(value.get(2));
+        System.out.println(value.getOrDefault(3,"Three"));
+
+        //Remove
+        System.out.println(value.remove(4));
+        System.out.println(value.remove(2,"Two"));
+
+        value.put(5,"Five");
+        value.put(7,"Seven");
+
+        System.out.println(value);
+
+        value.replace(5,"Paach");
+        System.out.println(value);
+    }
     public static void main(String[] args) {
         CollectionRevised cr = new CollectionRevised();
 //        cr.arrayList();
 //        cr.vector();
-//        cr.linked();
+        cr.linked();
         cr.queue();
+        cr.tree();
+        cr.hash();
     }
 }
