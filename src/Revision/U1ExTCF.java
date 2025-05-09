@@ -2,6 +2,7 @@ package Revision;
 
 public class U1ExTCF {
     public void Cal(int a, int b){
+
         try {
             System.out.println(a / b);
         } catch (ArithmeticException e){
