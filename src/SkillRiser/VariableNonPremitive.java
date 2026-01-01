@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class VariableNonPremitive {
     public static void main(String[] args) {
-        String str = "Kavita";
+        String str = "Kavita Chaubey";
         //String is a class that store a string variable...
         //Every class store a reference type
         Date date = new Date();
