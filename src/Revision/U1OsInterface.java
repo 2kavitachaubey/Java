@@ -5,7 +5,7 @@ interface MyInterface{
 }
 class myClas implements MyInterface{
     public void name(){
-        System.out.println("It's Kavita");
+        System.out.println("Its Kavita");
     }
     public void num(){
         System.out.println(number);
